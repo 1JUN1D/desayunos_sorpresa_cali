@@ -320,3 +320,94 @@ box-sizing: border-box;
     .product-card:nth-child(4) {
         animation-delay: 0.4s;
     }
+
+
+    /* Modal de Vista Previa de Imagen */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    animation: zoom 0.3s ease-out;
+    cursor: default;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close:hover,
+.close:focus {
+    color: #EABE81;
+}
+
+/* Cursor pointer en imágenes de productos */
+.product-image {
+    cursor: pointer;
+    position: relative;
+}
+
+.product-image::after {
+    content: '🔍';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(63, 81, 131, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+    
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+}
