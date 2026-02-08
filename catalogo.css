@@ -236,6 +236,50 @@ body {
     font-size: 1.5rem;
 }
 
+/* Tema San Valentín para Modal */
+.valentine-theme {
+    background: linear-gradient(135deg, #ff6b9d, #c94b7f) !important;
+    border: 3px solid #ff1744 !important;
+    box-shadow: 0 20px 60px rgba(255, 23, 68, 0.4) !important;
+    padding: 2rem !important;
+    max-width: 500px !important;
+}
+
+.valentine-theme h2 {
+    color: white !important;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.valentine-image {
+    margin: 1rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-height: 300px;
+}
+
+.valentine-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+.valentine-btn {
+    background: linear-gradient(135deg, #ff1744, #c94b7f) !important;
+    margin-top: 1.5rem;
+    padding: 12px 0 !important;
+    font-size: 1rem !important;
+}
+
+.valentine-btn:hover {
+    background: linear-gradient(135deg, #c94b7f, #ff1744) !important;
+    transform: scale(1.05);
+}
+
 .product-button {
     width: 100%;
     background: linear-gradient(135deg, #3F5183, #4d5ea5);
@@ -255,6 +299,99 @@ body {
     background: linear-gradient(135deg, #4d5ea5, #3F5183);
     transform: scale(1.02);
     box-shadow: 0 5px 15px rgba(63, 81, 131, 0.3);
+}
+
+/* Estilos Especiales para Tarjeta de San Valentín */
+.valentine-special {
+    background: linear-gradient(135deg, #fff5f7, #ffe4e9) !important;
+    border: 3px solid #ff6b9d !important;
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.3) !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+.valentine-special:hover {
+    transform: translateY(-15px) !important;
+    box-shadow: 0 25px 50px rgba(255, 107, 157, 0.4) !important;
+}
+
+.valentine-badge {
+    background: linear-gradient(135deg, #ff1744, #c94b7f) !important;
+    font-size: 0.9rem !important;
+    padding: 8px 15px !important;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.valentine-hearts {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.valentine-hearts .heart {
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.valentine-hearts .heart:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.valentine-hearts .heart:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.valentine-hearts .heart:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.valentine-hearts .heart:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.valentine-title {
+    color: #ff1744 !important;
+    text-shadow: 2px 2px 4px rgba(255, 23, 68, 0.2);
+}
+
+.valentine-price .new-price {
+    color: #ff1744 !important;
+    font-size: 2.8rem !important;
+}
+
+.valentine-button {
+    background: linear-gradient(135deg, #ff1744, #c94b7f) !important;
+    font-size: 1.2rem !important;
+}
+
+.valentine-button:hover {
+    background: linear-gradient(135deg, #c94b7f, #ff1744) !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 5px 20px rgba(255, 23, 68, 0.4) !important;
 }
 
 /* Category Badge */
@@ -441,12 +578,25 @@ body {
         margin: 15px;
     }
 
-    .promo-content h2 {
+    .promo-content h2, .valentine-theme h2 {
         font-size: 1.8rem;
     }
 
     .promo-content p {
         font-size: 1.1rem;
+    }
+
+    .valentine-hearts .heart {
+        font-size: 1.5rem;
+    }
+
+    .valentine-badge {
+        font-size: 0.75rem !important;
+        padding: 6px 12px !important;
+    }
+
+    .valentine-price .new-price {
+        font-size: 2.2rem !important;
     }
 }
 
@@ -511,4 +661,8 @@ body {
 
 .product-card:nth-child(4) {
     animation-delay: 0.4s;
+}
+
+body > section > div > div > div.product-card.valentine-special > div.product-image > img {
+    border-radius: 15px 15px 0 0;
 }

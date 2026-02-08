@@ -70,13 +70,12 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 <body>
     <!-- Modal Promocional -->
     <div id="promoModal" class="promo-modal">
-        <div class="promo-content">
-            <h2>🎉 ¡PROMOCIÓN ESPECIAL! 🎉</h2>
-            <p>Durante los meses de <strong>Enero y Febrero</strong> tenemos precios especiales en todos nuestros desayunos sorpresa</p>
-            <div class="promo-highlight">
-                <strong>¡Aprovecha ahora y sorprende con amor!</strong>
+        <div class="promo-content valentine-theme">
+            <h2>💕 Nectar Especial San Valentín 💕</h2>
+            <div class="valentine-image">
+                <img src="assets/san_valentin.webp" alt="Nectar Especial San Valentín">
             </div>
-            <p style="font-size: 1rem; margin-top: 1.5rem; opacity: 0.9;">Este mensaje se cerrará automáticamente...</p>
+            <button class="product-button valentine-btn" onclick="closePromoModal()">Ver Catálogo Completo</button>
         </div>
     </div>
 
@@ -96,6 +95,31 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     <section class="catalog">
         <div class="container">
             <div class="products-grid">
+
+<!-- NECTAR ESPECIAL SAN VALENTÍN - DESTACADO -->
+<div class="product-card valentine-special" data-category="desayunos">
+    <div class="category-badge valentine-badge">💕 Edición San Valentín 💕</div>
+    <div class="valentine-hearts">
+        <span class="heart">❤️</span>
+        <span class="heart">💕</span>
+        <span class="heart">💖</span>
+        <span class="heart">❤️</span>
+    </div>
+    <div class="product-image" onclick="openImageModal('assets/san_valentin.webp')">
+        <img src="assets/san_valentin.webp" alt="Nectar Especial San Valentín - Desayuno Premium">
+    </div>
+    <div class="product-content">
+        <h2 class="product-title valentine-title">Nectar Especial San Valentín</h2>
+        <p class="product-description">Croissant relleno de Nutella con banano y almendras, sandwich de waffles, parfait de durazno, café deli, cerveza BBC y mix de frutos secos. <strong>Un tributo al amor que nutre… al amor que, como el néctar, siempre vale la pena.</strong></p>
+        <div class="product-price valentine-price">
+            <span class="new-price">$200,000</span>
+        </div>
+        <button class="product-button valentine-button"
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa el Nectar Especial San Valentín por $200,000. ¿Podrías darme más información?', 'nectar_especial_san_valentin')">
+            💕 Pedir Ahora 💕
+        </button>
+    </div>
+</div>
 
 <!-- DESAYUNO 1 -->
 <div class="product-card" data-category="desayunos">
