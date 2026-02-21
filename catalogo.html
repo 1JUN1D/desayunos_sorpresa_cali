@@ -68,17 +68,6 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </head>
 
 <body>
-    <!-- Modal Promocional -->
-    <div id="promoModal" class="promo-modal">
-        <div class="promo-content valentine-theme">
-            <h2>💕 Nectar Especial San Valentín 💕</h2>
-            <div class="valentine-image">
-                <img src="assets/san_valentin.webp" alt="Nectar Especial San Valentín">
-            </div>
-            <button class="product-button valentine-btn" onclick="closePromoModal()">Ver Catálogo Completo</button>
-        </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -94,10 +83,10 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     <!-- Catalog Section -->
     <section class="catalog">
         <div class="container">
-            <div class="products-grid">
+            <div class="products-grid" id="productsGrid">
 
 <!-- NECTAR ESPECIAL SAN VALENTÍN - DESTACADO -->
-<div class="product-card valentine-special" data-category="desayunos">
+<div class="product-card valentine-special" data-category="desayunos" data-price="200000">
     <div class="category-badge valentine-badge">💕 Edición San Valentín 💕</div>
     <div class="valentine-hearts">
         <span class="heart">❤️</span>
@@ -122,7 +111,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 1 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="110000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno1.webp')">
         <img src="assets/desayuno1.webp" alt="Bolsito de Amor - Desayuno Romántico">
@@ -131,18 +120,17 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
         <h2 class="product-title">Bolsito de Amor</h2>
         <p class="product-description">Ideal para esa persona que ocupa un espacio en tu corazón. Incluye hermoso llavero artesanal, bolsito en yute reutilizable, sándwich deli artesanal, sodita de frutos rojos, mix frutal y mermelada francesa. Un regalo perfecto lleno de detalles especiales.</p>
         <div class="product-price">
-            <span class="old-price">$112,500</span>
-            <span class="new-price">$100,000</span>
+            <span class="new-price">$110,000</span>
         </div>
         <button class="product-button"
-            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa el Bolsito de Amor por $100,000. ¿Podrías darme más información?', 'bolsito_amor')">
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa el Bolsito de Amor por $110,000. ¿Podrías darme más información?', 'bolsito_amor')">
             Pedir Ahora
         </button>
     </div>
 </div>
 
 <!-- DESAYUNO 2 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="85000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno2.webp')">
         <img src="assets/desayuno2.webp" alt="Corazón Contento - Desayuno Completo">
@@ -162,7 +150,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 3 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="153000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno3.webp')">
         <img src="assets/desayuno3.webp" alt="Cofre en Madera - Desayuno Premium">
@@ -182,7 +170,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 4 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="130000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno4.webp')">
         <img src="assets/desayuno4.webp" alt="Cilindro Florece - Desayuno Elegante">
@@ -202,7 +190,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 5 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="75000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno5.webp')">
         <img src="assets/desayuno5.webp" alt="Homey Waffles - Merienda Especial">
@@ -211,18 +199,17 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
         <h2 class="product-title">Homey Waffles</h2>
         <p class="product-description">Hermosa caja en acetato y cartón duro de 18-20 cm, ideal para desayuno, tardeo o merienda. Deliciosos waffles súper esponjosos (banano-avena o mezcla de harina), orejitas de azúcar, chocolate con maní, 2 Ferreros, miel, rollout de jamón y queso, y tarjeta personalizada.</p>
         <div class="product-price">
-            <span class="old-price">$75,000</span>
-            <span class="new-price">$70,000</span>
+            <span class="new-price">$75,000</span>
         </div>
         <button class="product-button"
-            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa Homey Waffles por $70,000. ¿Podrías darme más información?', 'homey_waffles')">
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa Homey Waffles por $75,000. ¿Podrías darme más información?', 'homey_waffles')">
             Pedir Ahora
         </button>
     </div>
 </div>
 
 <!-- DESAYUNO 6 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="130000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno6.webp')">
         <img src="assets/desayuno6.webp" alt="Amore Mío - Desayuno Romántico">
@@ -242,7 +229,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 7 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="105000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno7.webp')">
         <img src="assets/desayuno7.webp" alt="Buenos Días - Desayuno Completo">
@@ -262,7 +249,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 8 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="140000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno8.webp')">
         <img src="assets/Desayuno8.webp" alt="Vibra Bonito - Desayuno Alegre">
@@ -282,7 +269,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 9 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="140000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno9.webp')">
         <img src="assets/Desayuno9.webp" alt="Niño Interior - Desayuno Colección">
@@ -302,7 +289,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 10 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="135000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno10.webp')">
         <img src="assets/Desayuno10.webp" alt="Colores Para Tu Vida - Edición Especial">
@@ -321,9 +308,8 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     </div>
 </div>
 
-
 <!-- DESAYUNO 11 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="185000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno11.webp')">
         <img src="assets/Desayuno11.webp" alt="Mostacho 💙 - Desayuno Super Completo">
@@ -343,7 +329,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 12 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="145000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno12.webp')">
         <img src="assets/Desayuno12.webp" alt="Best mom ever 🌸 - Edición Especial Mamá">
@@ -363,7 +349,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 13 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="100000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno13.webp')">
         <img src="assets/Desayuno13.webp" alt="Super mommy 🌸 - Desayuno o Tardeo">
@@ -383,7 +369,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 14 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="70000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno14.webp')">
         <img src="assets/Desayuno14.webp" alt="Mini box para mamá - Box Delicioso">
@@ -403,7 +389,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 15 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="180000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno15.webp')">
         <img src="assets/Desayuno15.webp" alt="Vibes 💞💫 - Edición Especial">
@@ -423,7 +409,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 16 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="200000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/Desayuno16.webp')">
         <img src="assets/Desayuno16.webp" alt="RETRO 💞💫 - Estilo Millennial">
@@ -443,7 +429,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 17 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="182000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno17.webp')">
         <img src="assets/desayuno17.webp" alt="Caja Cofre 2.0 - Desayuno Sorpresa">
@@ -465,8 +451,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 18 -->
-
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="190000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno18.webp')">
         <img src="assets/desayuno18.webp" alt="Canasta de Amor - Desayuno Sorpresa">
@@ -488,8 +473,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 19 -->
-
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="105000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno19.webp')">
         <img src="assets/desayuno19.webp" alt="Mañanas de Amor - Desayuno Sorpresa">
@@ -511,8 +495,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 20 -->
-
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="145000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno20.webp')">
         <img src="assets/desayuno20.webp" alt="Momento A.M - Desayuno Sorpresa">
@@ -533,10 +516,8 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     </div>
 </div>
 
-
-<!-- DESAYUNO -21 -->
-
-<div class="product-card" data-category="desayunos">
+<!-- DESAYUNO 21 -->
+<div class="product-card" data-category="desayunos" data-price="130000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno21.webp')">
         <img src="assets/desayuno21.webp" alt="Cajita Feliz - Desayuno Sorpresa Infantil">
@@ -557,9 +538,8 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     </div>
 </div>
 
-<!-- DESAYUNO -22 -->
-
-<div class="product-card" data-category="desayunos">
+<!-- DESAYUNO 22 -->
+<div class="product-card" data-category="desayunos" data-price="180000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno22.webp')">
         <img src="assets/desayuno22.webp" alt="Bandeja Despertar - Desayuno Sorpresa Completo">
@@ -580,9 +560,8 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     </div>
 </div>
 
-<!-- DESAYUNO -23 -->
-
-<div class="product-card" data-category="desayunos">
+<!-- DESAYUNO 23 -->
+<div class="product-card" data-category="desayunos" data-price="183000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno23.webp')">
         <img src="assets/desayuno23.webp" alt="Madera y Sol - Desayuno Sorpresa en Caja de Madera">
@@ -603,9 +582,8 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     </div>
 </div>
 
-<!-- DESAYUNO - 24 -->
-
-<div class="product-card" data-category="desayunos">
+<!-- DESAYUNO 24 -->
+<div class="product-card" data-category="desayunos" data-price="120000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno24.webp')">
         <img src="assets/desayuno24.webp" alt="Gran Mañana - Desayuno Sorpresa con Variedad de Sabores">
@@ -627,7 +605,7 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
 </div>
 
 <!-- DESAYUNO 25 -->
-<div class="product-card" data-category="desayunos">
+<div class="product-card" data-category="desayunos" data-price="142000">
     <div class="category-badge">Desayunos Sorpresa</div>
     <div class="product-image" onclick="openImageModal('assets/desayuno25.webp')">
         <img src="assets/desayuno25.webp" alt="Cajita Feliz Senior - Desayuno Sorpresa">
@@ -640,13 +618,73 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
         <div class="product-price">
             <span class="old-price">$159,800</span>
             <span class="new-price">$142,000</span>
-        </div>        <button class="product-button"
+        </div>
+        <button class="product-button"
             onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa la Cajita Feliz Senior por $142,000. ¿Podrías darme más información?', 'cajita_feliz_senior')">
             Pedir Ahora
         </button>
     </div>
 </div>
 
+<!-- DESAYUNO 26 -->
+
+<div class="product-card" data-category="desayunos" data-price="75000">
+    <div class="category-badge">Desayunos Sorpresa</div>
+    <div class="product-image" onclick="openImageModal('assets/desayuno26.webp')">
+        <img src="assets/desayuno26.webp" alt="Homey Waffles 2.0 - Edición con Galletas de Milo">
+    </div>
+    <div class="product-content">
+        <h2 class="product-title">Homey Waffles 2.0</h2>
+        <p class="product-description">Nuestra versión renovada de Homey Waffles pero con galletas de Milo y Frunis incluidos. Incluye también waffles, rollos de jamón y queso, orejitas de azúcar, chocolate con maní, miel, caja en acetato y tarjeta personalizada. ¡Más sabor en cada bocado!</p>
+        <div class="product-price">
+            <span class="new-price">$75,000</span>
+        </div>
+        <button class="product-button"
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa Homey Waffles 2.0 por $75,000. ¿Podrías darme más información?', 'homey_waffles_2')">
+            Pedir Ahora
+        </button>
+    </div>
+</div>
+
+<!-- DESAYUNO 27 -->
+
+<div class="product-card" data-category="desayunos" data-price="70000">
+    <div class="category-badge">Desayunos Sorpresa</div>
+    <div class="product-image" onclick="openImageModal('assets/desayuno27.webp')">
+        <img src="assets/desayuno27.webp" alt="Pequeño Cariño ❤️ - Desayuno Sencillo y Bonito">
+    </div>
+    <div class="product-content">
+        <h2 class="product-title">Pequeño Cariño ❤️</h2>
+        <p class="product-description">Desayuno sencillo pero bonito ☺️ Ideal para demostrar ese cariño especial. Incluye jugo de naranja, masmelos, manzana, tortillas de trigo con huevos con jamón y queso, caja en cartón y tarjeta personalizada. Pequeño en tamaño, grande en amor.</p>
+        <div class="product-price">
+            <span class="new-price">$70,000</span>
+        </div>
+        <button class="product-button"
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa Pequeño Cariño por $70,000. ¿Podrías darme más información?', 'pequeno_carino')">
+            Pedir Ahora
+        </button>
+    </div>
+</div>
+
+<!-- DESAYUNO 28 -->
+
+<div class="product-card" data-category="desayunos" data-price="265000">
+    <div class="category-badge">Desayunos Sorpresa</div>
+    <div class="product-image" onclick="openImageModal('assets/desayuno28.webp')">
+        <img src="assets/desayuno28.webp" alt="Le Festín Bleu 💙 - Desayuno para Compartir">
+    </div>
+    <div class="product-content">
+        <h2 class="product-title">Le Festín Bleu 💙 Para Compartir</h2>
+        <p class="product-description">¡Este no es solo un desayuno, es un banquete lleno de sabor! 💙 Ideal para aniversarios, quinceaños o para enviarlo como regalo a dos personas. Perfecto para celebrar por todo lo alto. Incluye mesa plegable en madera, copa en vidrio con parfait, rollos de jamón queso y piña horneados, rollos de jamón y queso, postre para dos personas de limón o maracuyá, empanadas, omelete con tomate, waffles con yogurt y salsita de frutos rojos, jugo de naranja en vaso de vidrio, frutas y mermelada francesa, 3 globos en helio, mantel en satín y tarjeta personalizada.</p>
+        <div class="product-price">
+            <span class="new-price">$265,000</span>
+        </div>
+        <button class="product-button"
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa Le Festín Bleu para Compartir por $265,000. ¿Podrías darme más información?', 'le_festin_bleu')">
+            Pedir Ahora
+        </button>
+    </div>
+</div>
 
             </div>
         </div>
@@ -675,14 +713,14 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
             const modalImg = document.getElementById('modalImage');
             modal.style.display = 'block';
             modalImg.src = imageSrc;
-            document.body.style.overflow = 'hidden'; // Prevenir scroll
+            document.body.style.overflow = 'hidden';
         }
 
         // Función para cerrar modal
         function closeImageModal() {
             const modal = document.getElementById('imageModal');
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restaurar scroll
+            document.body.style.overflow = 'auto';
         }
 
         // Cerrar modal con tecla ESC
@@ -692,23 +730,25 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
             }
         });
 
-        // Modal Promocional - Mostrar al cargar la página
+        // Ordenar productos de menor a mayor precio al cargar
         window.addEventListener('load', function() {
-            const promoModal = document.getElementById('promoModal');
-            
-            // Mostrar el modal
-            promoModal.classList.add('show');
-            
-            // Cerrar automáticamente después de 3 segundos
-            setTimeout(function() {
-                promoModal.classList.remove('show');
-            }, 3000);
-            
-            // También permitir cerrar al hacer clic en el fondo
-            promoModal.addEventListener('click', function(e) {
-                if (e.target === promoModal) {
-                    promoModal.classList.remove('show');
-                }
+            const grid = document.getElementById('productsGrid');
+            const cards = Array.from(grid.querySelectorAll('.product-card'));
+
+            // Separar card especial San Valentín (siempre primero)
+            const valentineCard = cards.find(c => c.classList.contains('valentine-special'));
+            const regularCards = cards.filter(c => !c.classList.contains('valentine-special'));
+
+            // Ordenar las regulares de menor a mayor precio
+            regularCards.sort(function(a, b) {
+                return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+            });
+
+            // Limpiar el grid y reinsertar: San Valentín primero, luego ordenados
+            grid.innerHTML = '';
+            if (valentineCard) grid.appendChild(valentineCard);
+            regularCards.forEach(function(card) {
+                grid.appendChild(card);
             });
         });
     </script>
