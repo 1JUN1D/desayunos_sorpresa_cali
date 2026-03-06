@@ -660,6 +660,65 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
     </div>
 </div>
 
+<!-- DESAYUNO 29 - DÍA DE LA MUJER - MAR-AVILLOSA -->
+<div class="product-card mujer-special" data-category="desayunos" data-price="200000">
+    <div class="category-badge mujer-badge">🌊 Edición Día de la Mujer 🌺</div>
+    <div class="mujer-hearts">
+        <span class="heart">🌺</span>
+        <span class="heart">🏄🏻‍♀️</span>
+        <span class="heart">💖</span>
+        <span class="heart">🌊</span>
+    </div>
+    <div class="product-image" onclick="openImageModal('assets/desayuno29.webp')">
+        <img src="assets/desayuno29.webp" alt="MAR-AVILLOSA - Edición Especial Día de la Mujer 2026">
+    </div>
+    <div class="product-content">
+        <h2 class="product-title mujer-title">MAR-AVILLOSA 🌊🏄🏻‍♀️💖</h2>
+        <p class="product-description" style="font-style: italic; color: #555;">
+            <strong style="color: #2e86ab; display: block; font-size: 1rem; margin-bottom: 0.5rem;">EDICIÓN ESPECIAL DÍA DE LA MUJER 2026</strong>
+            "No es solo un desayuno… es un gesto para decir: <em>Te veo. Y mereces sentirte especial.</em>" 🏄🏻‍♀️🌊💖🌺
+            <br><br>
+            <span style="font-style: normal; font-size: 0.95rem; color: #444;">
+            🎁 <strong>Caja tipo libro con diseño exclusivo</strong><br>
+            ✨ <strong>Solo 25 mujeres tendrán esta edición</strong><br><br>
+            Bagel artesanal con jamón y queso · Frutas frescas seleccionadas · Yogurt griego con semillas, almendras y arándanos · Miel natural · Galletas infladas Quaker sabor frutos rojos · <strong>Pinza floral para el cabello</strong> 🌸<br><br>
+            <em>Porque eres fuerte, eres hermosa, eres infinita como el mar.</em>
+            </span>
+        </p>
+        <div class="product-price mujer-price">
+            <span class="new-price" style="color: #2e86ab;">$180,000</span>
+        </div>
+        <button class="product-button mujer-button"
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa la MAR-AVILLOSA Edición Especial Día de la Mujer 2026 por $200,000. ¿Quedan cupos?', 'maravillosa_dia_mujer')">
+            🌊 Quiero Mi Edición Especial 💖
+        </button>
+    </div>
+</div>
+
+<!-- DESAYUNO 30 - DÍA DE LA MUJER - MUJER DE MAR Y SOL -->
+<div class="product-card mujer-sol-special" data-category="desayunos" data-price="80000">
+    <div class="category-badge mujer-sol-badge">☀️ Día de la Mujer 🌸</div>
+    <div class="product-image" onclick="openImageModal('assets/desayuno30.webp')">
+        <img src="assets/desayuno30.webp" alt="Mujer de Mar y Sol - Desayuno Día de la Mujer">
+    </div>
+    <div class="product-content">
+        <h2 class="product-title mujer-sol-title">Mujer de Mar y Sol 🏄🏻‍♀️☀️🌺</h2>
+        <p class="product-description">
+            Una edición más sencilla pero igual de significativa ✨<br><br>
+            Con <strong>gardenias</strong> para las mujeres que representan amor puro y belleza auténtica 🌸<br><br>
+            Bagel con queso crema, jamón ahumado y queso con lechuga baby · Soda de maracuyá deliciosa y refrescante · <strong>Bolsa de lujo de colección</strong> con diseño exclusivo hecho para este día 💖🏄🏻‍♀️<br><br>
+            <em>Lo pequeño también puede ser profundamente importante.</em>
+        </p>
+        <div class="product-price">
+            <span class="new-price" style="color: #e07b39;">$90,000</span>
+        </div>
+        <button class="product-button mujer-sol-button"
+            onclick="trackWhatsAppLead('https://wa.me/573244771344?text=Hola, me interesa Mujer de Mar y Sol por $80,000. ¿Podrías darme más información?', 'mujer_mar_y_sol')">
+            ☀️ Pedir Ahora 🌺
+        </button>
+    </div>
+</div>
+
 <!-- DESAYUNO 28 -->
 
 <div class="product-card" data-category="desayunos" data-price="265000">
@@ -729,17 +788,25 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
             const grid = document.getElementById('productsGrid');
             const cards = Array.from(grid.querySelectorAll('.product-card'));
 
-            // Separar card especial San Valentín (siempre primero)
+            // Separar cards especiales (siempre primero)
+            const mujerSpecialCard = cards.find(c => c.classList.contains('mujer-special'));
+            const mujerSolCard = cards.find(c => c.classList.contains('mujer-sol-special'));
             const valentineCard = cards.find(c => c.classList.contains('valentine-special'));
-            const regularCards = cards.filter(c => !c.classList.contains('valentine-special'));
+            const regularCards = cards.filter(c =>
+                !c.classList.contains('valentine-special') &&
+                !c.classList.contains('mujer-special') &&
+                !c.classList.contains('mujer-sol-special')
+            );
 
             // Ordenar las regulares de menor a mayor precio
             regularCards.sort(function(a, b) {
                 return parseInt(a.dataset.price) - parseInt(b.dataset.price);
             });
 
-            // Limpiar el grid y reinsertar: San Valentín primero, luego ordenados
+            // Limpiar el grid: Día de la Mujer primero, luego San Valentín, luego el resto
             grid.innerHTML = '';
+            if (mujerSpecialCard) grid.appendChild(mujerSpecialCard);
+            if (mujerSolCard) grid.appendChild(mujerSolCard);
             if (valentineCard) grid.appendChild(valentineCard);
             regularCards.forEach(function(card) {
                 grid.appendChild(card);

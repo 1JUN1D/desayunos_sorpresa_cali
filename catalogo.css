@@ -666,3 +666,97 @@ body {
 body > section > div > div > div.product-card.valentine-special > div.product-image > img {
     border-radius: 15px 15px 0 0;
 }
+
+/* ===== ESTILOS DÍA DE LA MUJER ===== */
+
+/* MAR-AVILLOSA - Tarjeta principal */
+.mujer-special {
+    background: linear-gradient(135deg, #e8f6fd, #d0eaf8) !important;
+    border: 3px solid #2e86ab !important;
+    box-shadow: 0 15px 40px rgba(46, 134, 171, 0.35) !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+.mujer-special:hover {
+    transform: translateY(-15px) !important;
+    box-shadow: 0 30px 60px rgba(46, 134, 171, 0.45) !important;
+}
+
+.mujer-badge {
+    background: linear-gradient(135deg, #2e86ab, #1a6a8a) !important;
+    font-size: 0.85rem !important;
+    padding: 7px 14px !important;
+    animation: pulse 2s infinite;
+}
+
+.mujer-hearts {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.mujer-hearts .heart {
+    font-size: 1.8rem;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.9;
+}
+.mujer-hearts .heart:nth-child(1) { animation-delay: 0s; }
+.mujer-hearts .heart:nth-child(2) { animation-delay: 0.6s; }
+.mujer-hearts .heart:nth-child(3) { animation-delay: 1.2s; }
+.mujer-hearts .heart:nth-child(4) { animation-delay: 1.8s; }
+
+.mujer-title {
+    color: #1a6a8a !important;
+    text-shadow: 1px 1px 3px rgba(46, 134, 171, 0.2);
+}
+
+.mujer-button {
+    background: linear-gradient(135deg, #2e86ab, #1a6a8a) !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.5px;
+}
+
+.mujer-button:hover {
+    background: linear-gradient(135deg, #1a6a8a, #2e86ab) !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 5px 20px rgba(46, 134, 171, 0.45) !important;
+}
+
+/* MUJER DE MAR Y SOL - Tarjeta secundaria */
+.mujer-sol-special {
+    background: linear-gradient(135deg, #fff8f0, #ffeedd) !important;
+    border: 3px solid #e07b39 !important;
+    box-shadow: 0 15px 40px rgba(224, 123, 57, 0.25) !important;
+}
+
+.mujer-sol-special:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 25px 50px rgba(224, 123, 57, 0.35) !important;
+}
+
+.mujer-sol-badge {
+    background: linear-gradient(135deg, #e07b39, #c45e20) !important;
+    font-size: 0.85rem !important;
+    padding: 7px 14px !important;
+}
+
+.mujer-sol-title {
+    color: #c45e20 !important;
+    text-shadow: 1px 1px 3px rgba(224, 123, 57, 0.2);
+}
+
+.mujer-sol-button {
+    background: linear-gradient(135deg, #e07b39, #c45e20) !important;
+}
+
+.mujer-sol-button:hover {
+    background: linear-gradient(135deg, #c45e20, #e07b39) !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 5px 20px rgba(224, 123, 57, 0.4) !important;
+}
