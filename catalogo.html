@@ -45,21 +45,33 @@ src="https://www.facebook.com/tr?id=1181834803900250&ev=PageView&noscript=1"
         gtag('js', new Date());
 
         gtag('config', 'AW-17503274952');
+        gtag('config', 'AW-17658828097');
     </script>
 
     <!-- FUNCIÓN DE TRACKING WHATSAPP PARA GOOGLE ADS -->
     <script>
         function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            var opened = false;
+            function openOnce() {
+                if (opened) return;
+                opened = true;
+                window.open(whatsappUrl, '_blank');
+            }
             try {
+                // Conversión cuenta principal
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-17503274952/lA9PCODAu4wbEMiPm5pB',
-                    'event_callback': function() {
-                        window.open(whatsappUrl, '_blank');
-                    }
+                    'send_to': 'AW-17503274952/lA9PCODAu4wbEMiPm5pB'
                 });
+                // Conversión cuenta secundaria
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17658828097/unXdCJ6mx7kcEMGqseRB',
+                    'event_callback': openOnce
+                });
+                // Respaldo: abrir aunque el callback no se dispare
+                setTimeout(openOnce, 800);
             } catch (error) {
                 console.error('Error en tracking:', error);
-                window.open(whatsappUrl, '_blank');
+                openOnce();
             }
             return false;
         }
